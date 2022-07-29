@@ -1,6 +1,8 @@
 # Introduction to Git and GitHub
 
 This workshop has been developed using the material offered by Library Carpentries. To view original materials [click here](https://librarycarpentry.org/lc-git/)
+### Table of Content
+[Before the workshop](#Before the workshop)
 
 ## Before the workshop
 
