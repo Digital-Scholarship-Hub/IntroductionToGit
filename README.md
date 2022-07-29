@@ -1,2 +1,3 @@
-# IntroductionToGit
-Introduction to Git and GitHub workshop
+# Introduction to Git and GitHub workshop
+
+https://Digital-Scholarship-Hub.github.io/IntroductionToGit/
