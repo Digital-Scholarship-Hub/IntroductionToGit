@@ -1,0 +1,254 @@
+/* TODO: Provide a namespace to avoid collisions for projects existing styles. */
+
+/**
+  Typography.
+*/
+
+h1,
+.mds-h1 {
+  font-family: var(--mds-font-serif);
+  font-size: var(--mds-font-size-xx-large);
+  line-height: var(--mds-line-height-normal);
+}
+
+h2,
+.mds-h2 {
+  font-family: var(--mds-font-serif-medium);
+  font-size: var(--mds-font-size-x-large);
+  line-height: var(--mds-line-height-normal);
+}
+
+h3,
+.mds-h3 {
+  font-family: var(--mds-font-serif-medium);
+  font-size: var(--mds-font-size-large);
+  line-height: var(--mds-line-height-normal);
+}
+
+h4,
+.mds-h4 {
+  font-family: var(--mds-font-serif-medium);
+  font-size: var(--mds-font-size-medium);
+  line-height: var(--mds-line-height-normal);
+}
+
+h5,
+.mds-h5 {
+  font-family: var(--mds-font-sans-medium);
+  font-size: var(--mds-font-size-medium);
+  line-height: var(--mds-line-height-normal);
+}
+
+/* Body font. */
+html {
+  font-family: var(--mds-font-sans);
+}
+
+/* Bold font weight usually used on paragraphs. */
+b,
+strong,
+.mds-copy--bold {
+  font-family: var(--mds-font-sans-bold);
+}
+
+/* Standard italics. */
+em,
+i,
+.mds-copy--italic {
+  font-family: var(--mds-font-sans-italic);
+  font-style: normal;
+}
+
+/*
+ Header variations.
+ */
+
+/* Serif italic. */
+h1 em {
+  font-family: var(--mds-font-serif-italic);
+  font-style: normal;
+}
+
+h2 em {
+  font-family: var(--mds-font-serif-italic);
+  font-style: normal;
+}
+
+h3 em {
+  font-family: var(--mds-font-serif-italic);
+  font-style: normal;
+}
+
+h4 em {
+  font-family: var(--mds-font-serif-italic);
+  font-style: normal;
+}
+
+/* Sans italic. */
+h5 em {
+  font-family: var(--mds-font-sans-italic);
+  font-style: normal;
+}
+
+h6 em {
+  font-family: var(--mds-font-sans-italic);
+  font-style: normal;
+}
+
+/* For expanded text on long hover of an abbreviation, include the title attribute. */
+abbr {
+  cursor: help;
+  border-bottom: var(--mds-border-info);
+}
+
+/* Contact information. */
+address {
+  margin-bottom: var(--mds-spacing-medium);
+}
+
+/*
+ Quotes.
+ */
+
+/* Quoting blocks of content from another source. */
+blockquote,
+.mds-text-quote--pulled {
+  margin: var(--mds-spacing-large) 0;
+  font-size: var(--mds-font-size-x-large);
+  font-family: var(--mds-font-serif-italic);
+  line-height: var(--mds-line-height-loose);
+}
+
+/*
+ Cite should not be nested in blockquotes
+ see https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-cite-element
+ */
+cite {
+  font-style: normal;
+  font-family: var(--mds-font-sans-bold);
+  font-size: var(--mds-font-size-small);
+}
+
+/*
+  Lists.
+  */
+
+ol {
+  list-style: decimal inside;
+}
+
+ul {
+  list-style: disc inside;
+}
+
+li {
+  line-height: var(--mds-line-height-normal);
+  margin-bottom: var(--list-item-margin-bottom, var(--mds-spacing-x-small));
+}
+
+/* Paragraph styling. */
+p {
+  font-size: var(--mds-font-size-medium);
+  line-height: var(--mds-line-height-normal);
+  margin: 0 0 var(--mds-spacing-small) 0;
+}
+
+/* Anchor tags in body content (paragraphs) will have a standard text underline. */
+p a:is(:not(.mds-button)) {
+  --decoration: underline;
+}
+
+/* Unordered list with in paragraphs display with a disc. */
+p ul {
+  list-style: disc;
+}
+
+/*
+  Description.
+  A list of terms with their associated descriptions.
+*/
+
+dl {
+  margin-bottom: var(--mds-spacing-medium);
+}
+
+dt {
+  font-family: var(--mds-font-sans-bold);
+}
+
+dt,
+dd {
+  line-height: var(--mds-line-height-normal);
+}
+
+/*
+ Code.
+*/
+code,
+pre {
+  font-family: var(--mds-font-mono);
+  border-radius: var(--mds-border-radius);
+  font-size: inherit;
+}
+
+/*
+ Use <pre> for multiple lines of code.
+ Be sure to escape any angle brackets in the code for proper rendering.
+*/
+pre {
+  display: block;
+  padding: var(--mds-spacing-xx-small);
+  margin: 0 0 var(--mds-spacing-medium);
+  line-height: var(--mds-line-height-normal);
+  word-break: break-word;
+  white-space: pre-wrap;
+  background: var(--mds-color-gray-900);
+  color: var(--mds-color-white);
+  tab-size: 2;
+}
+
+/* Wrap inline snippets of code with <code>. */
+p > code,
+li > code,
+dd > code,
+td > code {
+  background: var(--mds-color-info-100);
+  word-wrap: break-word;
+  padding: var(--mds-spacing-xx-small) var(--mds-spacing-x-small);
+  white-space: nowrap;
+}
+
+/* Details element. */
+details {
+  border-top: var(--mds-border-thin-light);
+  border-bottom: var(--mds-border-thin-light);
+  border-right: 0;
+  border-left: 0;
+  padding: var(--mds-spacing-x-small);
+}
+
+/*
+  Text modifiers.
+  */
+
+/* Muted text - most likely gray text. */
+.mds-copy--muted {
+  color: var(--mds-color-gray-400);
+}
+
+.mds-dark .mds-copy--muted {
+  --muted-color: var(--mds-color-gray-300);
+}
+
+/* Lead text - Make a paragraph stand out. */
+.mds-copy--lead {
+  font-size: var(--mds-font-size-large);
+}
+
+/* Smallest standard type size. */
+small,
+.mds-copy--micro {
+  font-family: var(--mds-font-sans);
+  font-size: var(--mds-font-size-small);
+  line-height: var(--mds-line-height-dense);
+}

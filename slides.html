@@ -1,0 +1,90 @@
+---
+layout: slides
+title: Slides
+permalink: /slides/
+nav_order: 5
+---
+
+<section data-transition="none">
+  <h2>Welcome!</h2>
+</section>
+
+<section data-transition="none">
+  <h2>What is version control?</h2>
+  <ul>
+    <li>Any system that manages changes to files over time.</li>
+    <li>Benefits of a version control system include:
+      <ul><li>Collaboration</li><li>Versioning</li></ul>
+    </li>
+  </ul>
+</section>
+
+<section data-transition="none">
+  <h2>Before we begin&hellip;</h2>
+  <div class="terminal">
+    <p>$ pwd</p>
+    <p>/Users/username/Documents/my-directory</p>
+    <br>
+    <br>
+    <p>$ ls</p>
+    <p>README.md</p>
+  </div>
+</section>
+
+<section data-transition="none">
+  <h2>Before we begin&hellip;</h2>
+  <div class="terminal">
+    <p>$ cat README.md</p>
+    <p>### Hi, my name is&hellip;<br><br>* bullet point 1<br>* bullet point 2</p>
+  </div>
+</section>
+
+<section data-transition="none">
+  <h2>Before we begin&hellip;</h2>
+  <div class="terminal">
+    <p>$ git config --list</p>
+    <p>user.email=my.name@mcgill.ca<br>...<br>...</p>
+  </div>
+</section>
+
+<section data-transition="none">
+  <h2>If necessary&hellip;</h2>
+  <div class="terminal">
+    <p>$ git config --global user.name "My Name"<br><br>$ git config --global user.email "my.name@mcgill.ca"</p>
+  </div>
+</section>
+
+<section data-transition="none">
+  <h2>Now we’re ready!</h2>
+  <div class="terminal">
+    <p>$ git init -b main</p>
+  </div>
+</section>
+
+<section data-transition="none">
+  <h2>Now we’re ready!</h2>
+  <div class="terminal">
+    <p>$ git remote add origin https://github.com/MY_USERNAME/MY_USERNAME.git</p>
+  </div>
+</section>
+
+<section data-transition="none">
+  <h2>Now we’re ready!</h2>
+  <div class="terminal">
+    <p>$ git add README.md</p>
+  </div>
+</section>
+
+<section data-transition="none">
+  <h2>Now we’re ready!</h2>
+  <div class="terminal">
+    <p>$ git commit -m "First commit"</p>
+  </div>
+</section>
+
+<section data-transition="none">
+  <h2>Now we’re ready!</h2>
+  <div class="terminal">
+    <p>$ git push -u origin main</p>
+  </div>
+</section>

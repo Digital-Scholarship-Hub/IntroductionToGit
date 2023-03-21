@@ -1,0 +1,52 @@
+/*
+ Table element.
+ */
+
+table {
+  font-size: var(--mds-font-size-medium);
+  margin: var(--mds-spacing-medium) 0;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Captions used with Tables */
+table caption {
+  font-size: var(--mds-font-size-large);
+  text-align: left;
+  margin-bottom: var(--mds-spacing-small);
+}
+
+/* Tabular headers and tabular data. */
+th,
+td {
+  padding: var(--mds-spacing-x-small);
+  text-align: left;
+  vertical-align: top;
+  border: var(--mds-border-thin);
+}
+
+/* Table head and Table foot. */
+thead,
+tfoot {
+  background-color: var(--mds-color-gray-200);
+}
+
+/* Tabular headers */
+tbody th {
+  background-color: var(--mds-color-gray-900);
+  color: var(--mds-color-white);
+}
+
+tbody tr:nth-child(even) th {
+  background-color: var(--mds-color-black);
+}
+
+/* Zebra strip table rows */
+tbody tr:nth-child(even) {
+  background-color: var(--mds-color-gray-100);
+}
+
+/* Table row hover effect */
+tbody tr:hover {
+  background-color: var(--mds-color-gray-200);
+}

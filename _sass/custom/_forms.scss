@@ -1,0 +1,347 @@
+/*
+ Standardizes spacing and padding for form elements.
+ */
+
+/* Select and base input padding. Padding for text specific inputs will be handled uniquely. */
+select,
+input {
+  padding: var(--mds-spacing-x-small);
+}
+
+/* Text specific input padding to allow for possible icons as background images. */
+input[type="text"],
+textarea {
+  padding: var(--mds-spacing-x-small) var(--mds-spacing-large) var(--mds-spacing-x-small) var(--mds-spacing-x-small);
+}
+
+/* All Inputs, textarea and select styles. */
+input,
+textarea,
+select {
+  --input-font: inherit;
+  --color-background: var(--mds-color-white);
+  --color-text: var(--mds-color-black);
+  --input-border: var(--mds-border-thin);
+  --focus: 2px var(--mds-color-black);
+
+  background-color: var(--color-background);
+  border: var(--input-border);
+  box-sizing: border-box;
+  color: var(--color-text);
+
+  /* Inherit theme font styling. */
+  font-family: var(--input-font);
+  margin: 0;
+  font-size: max(var(--mds-font-sans-medium), 1em);
+  transition: box-shadow 0.2s, var(--mds-transition-medium);
+  outline: none;
+}
+
+/* Hover styles. */
+input:hover,
+textarea:hover,
+select:hover {
+  box-shadow: 0 0 0 var(--focus);
+}
+
+/* Standardize height of each fields except for textarea. */
+.input:not(textarea) {
+  line-height: var(--mds-line-height-normal);
+  height: var(--mds-font-size-medium);
+}
+
+/* Labels. */
+
+/* Centers elements within Labels such as the preferred <input> tag. */
+
+label {
+  align-items: center;
+  column-gap: var(--mds-spacing-x-small);
+  display: flex;
+  font-family: var(--mds-font-sans);
+  margin-bottom: var(--mds-spacing-small);
+}
+
+/* Disabled label styling when there are nested disabled inputs. */
+label:has(> input[disabled], > input:disabled) {
+  color: var(--mds-color-gray-400);
+}
+
+/* Fieldset styling. */
+fieldset {
+  border: var(--mds-border-thin);
+  display: block;
+  padding: var(--mds-spacing-medium) var(--mds-spacing-large) var(--mds-spacing-large);
+}
+
+/* Legend styling. Displays similar to H5 heading. */
+
+legend {
+  font-family: var(--mds-font-sans);
+  font-size: var(--mds-font-size-medium);
+  line-height: var(--mds-line-height-normal);
+  padding: var(--mds-spacing-x-small) var(--mds-spacing-xx-small);
+}
+
+/*
+  Disabled inputs.
+*/
+input[disabled],
+:disabled {
+  --input-border: var(--mds-color-gray-300);
+  --color-background: var(--mds-color-gray-200);
+  --color-text: var(--mds-color-gray-400);
+
+  border: var(--mds-border-thin-light);
+  cursor: not-allowed;
+}
+
+/* Required fields. */
+:required {
+  /*
+  Field styling stays the same however,
+  required fields are indicated with a '*' beside the label.
+  */
+}
+
+/*
+  Focus
+  Utilize browser styling to maintain accessibility.
+  */
+:focus {
+  /* Displays as outline. */
+  box-shadow: 0 0 0 var(--focus);
+}
+
+/* Removes state feedback. */
+:disabled:hover {
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* Read only. */
+.input[readonly] {
+  border-style: dotted;
+  cursor: not-allowed;
+  color: var(--mds-color-gray-400);
+}
+
+/* File type spacing adjustments to align visually with other inputs. */
+input[type="file"] {
+  font-size: 0.9em;
+  padding-top: 0.35rem;
+}
+
+/* Submit styling. */
+input[type="submit"] {
+  --color-text: var(--mds-color-white);
+  --color-background: var(--mds-color-black);
+  --color-border: var(--mds-color-black);
+  --input-border: var(--mds-border-medium);
+  --input-font: var(--mds-font-sans-medium);
+
+  border-radius: var(--mds-border-radius);
+  display: inline-flex;
+  padding: var(--mds-spacing-x-small) var(--mds-spacing-medium);
+}
+
+input[type="submit"]:hover {
+  --color-text: var(--mds-color-black);
+  --color-background: var(--mds-color-white);
+  --color-border: var(--mds-color-black);
+
+  box-shadow: none;
+  text-decoration: none;
+}
+
+/* Reset input styling. */
+input[type="reset"] {
+  /* Uses the same styling as the .mds-button */
+}
+
+/*
+  Checkbox and Radio inputs.
+  - The input selector is used as the container which displays a background.
+  - ::after pseudo element is used as the indicator or button.
+*/
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+  /*
+  Base styling for checkbox and radio buttons
+  input element used as a container.
+  */
+  input[type="checkbox"],
+  input[type="radio"] {
+    --knob-size: 14px;
+    --border-width: 2px;
+    --input-size: calc(var(--knob-size) + var(--border-width));
+
+    appearance: none;
+    height: var(--input-size);
+    width: var(--input-size);
+    outline: none;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  /* ::after pseudo element provides an indicator.  */
+  input[type="checkbox"]::after,
+  input[type="radio"]::after {
+    content: "";
+    display: block;
+    left: 0;
+    top: 0;
+    position: absolute;
+    transform: scale(var(--s, 0.7));
+    opacity: var(--o, 0%);
+  }
+
+  /*
+    Radio buttons.
+  */
+
+  /* Radio specific ui. */
+  input[type="radio"] {
+    border-radius: 50%;
+  }
+
+  /* Round ::after pseudo radio element. */
+  input[type="radio"]::after {
+    width: var(--knob-size);
+    height: var(--knob-size);
+    background: var(--mds-color-black);
+    border-radius: 50%;
+  }
+
+  /* Radio focus and checked state. */
+  input[type="radio"]:checked,
+  input[type="radio"]:focus {
+    --o: 1;
+    --s: 0.8;
+    --color-background: var(--mds-color-white);
+  }
+
+  /*
+    Creates a faux checkbox by adding a rotated outline rectangle
+    with two borders removed.
+  */
+  input[type="checkbox"]::after {
+    width: 6px;
+    height: 9px;
+    border: var(--border-width) solid var(--mds-color-black);
+    border-top: 0;
+    border-left: 0;
+    left: 4px;
+    top: 1px;
+    transform: rotate(var(--r, 20deg));
+  }
+
+  /* Checked checkbox */
+  input[type="checkbox"]:checked {
+    --color-background: var(--mds-color-white);
+    --r: 43deg;
+    --o: 1;
+  }
+
+  /*
+  Toggle switch Input used on checkboxes.
+  */
+
+  input[type="checkbox"].mds-switch {
+    --switch-width: calc(var(--knob-size) * 2);
+    --switch-height: calc(var(--input-size) + var(--border-width));
+    --switch-radius: var(--knob-size);
+
+    width: var(--switch-width);
+    height: var(--switch-height);
+    border-radius: var(--switch-radius);
+  }
+
+  /* ::after element applies the knob. */
+  input[type="checkbox"].mds-switch::after {
+    --o: 1;
+
+    left: 1px;
+    top: 1px;
+    border-radius: 50%;
+    border: none;
+    width: var(--knob-size);
+    height: var(--knob-size);
+    transform: translateX(var(--x, 0));
+    background: var(--ab, var(--mds-color-black));
+  }
+
+  /* Toggle checked. */
+  input[type="checkbox"].mds-switch:checked {
+    --ab: var(--mds-color-white);
+    --x: 22px;
+    --color-background: var(--mds-color-black);
+  }
+
+  /* Drop the opacity of the toggle knob when the input is disabled */
+  input[type="checkbox"].mds-switch:disabled:not(:checked)::after {
+    opacity: 60%;
+  }
+}
+
+/*
+ McGill-ds form input classes.
+ */
+
+/* Input help text description. */
+.mds-form-item--hint {
+  color: var(--mds-color-gray-400);
+  font-size: var(--mds-font-size-small);
+  margin-top: var(--mds-spacing-xx-small);
+  margin-bottom: 0;
+}
+
+/*
+  Error messages
+*/
+
+/* Error icon. Displays error icon in the field */
+input[type="text"].mds-form-item--error,
+input[type="file"].mds-form-item--error {
+  --input-border: var(--mds-border-error);
+
+  background-image: var(--mds-icon-error);
+  background-position: 98% 50%;
+  background-repeat: no-repeat;
+}
+
+/* Error message description. */
+.mds-form-item--error-message {
+  color: var(--mds-color-error-500);
+}
+
+/* Required fields. To be used on form labels. */
+.mds-label--required::after {
+  content: " *";
+  color: var(--mds-color-error-500);
+}
+
+/* Wrapper to help with spacing between form elements. */
+
+/*
+  TODO: Make '.mds-form-item' more generic since we can use this declaration in multiple instances e.g., .mds-clearfix
+  */
+.mds-form-item {
+  clear: both;
+}
+
+/*
+  Utilities.
+*/
+
+.mds-form--inline {
+  --gap: var(--mds-spacing-x-small);
+  --align: flex-start;
+  --justify: start;
+  --direction: row;
+
+  display: flex;
+  gap: var(--gap);
+}

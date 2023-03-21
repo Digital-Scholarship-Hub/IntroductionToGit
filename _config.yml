@@ -1,0 +1,11 @@
+title: "Introduction To Git"
+
+baseurl: /IntroductionToGit
+
+remote_theme: just-the-docs/just-the-docs
+search_enabled: false
+
+exclude:
+  - 'Gemfile'
+  - 'Gemfile.lock'
+  - 'README.md'

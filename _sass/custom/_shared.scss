@@ -1,0 +1,335 @@
+:root {
+  /* Colors */
+
+  /**
+  * @tokens Primary
+  * @presenter Color
+  */
+  --mds-color-primary-500: #ed1b2f;
+  --mds-color-primary-800: #9e0918;
+
+  /**
+  * @tokens Greyscale
+  * @presenter Color
+  */
+  --mds-color-black: #000;
+  --mds-color-gray-900: #1e1e1e;
+  --mds-color-gray-400: #767676;
+  --mds-color-gray-300: #979799;
+  --mds-color-gray-200: #e5e7eb;
+  --mds-color-gray-100: #f4f4f4;
+  --mds-color-white: #fff;
+
+  /**
+  * @tokens Success
+  * @presenter Color
+  */
+  --mds-color-success-500: #009582;
+  --mds-color-success-100: #d7f1ea;
+
+  /**
+  * @tokens Error
+  * @presenter Color
+  */
+  --mds-color-error-500: #d14444;
+  --mds-color-error-100: #fadbd6;
+
+  /**
+  * @tokens Warning
+  * @presenter Color
+  */
+  --mds-color-warning-500: #de8706;
+  --mds-color-warning-100: #ffe4b7;
+
+  /**
+  * @tokens Info
+  * @presenter Color
+  */
+  --mds-color-info-500: #03a9f4;
+  --mds-color-info-100: #cdeefd;
+
+  /**
+  * @tokens Radius
+  * @presenter BorderRadius
+  */
+  --mds-border-radius: 0.25rem;
+
+  /**
+  * @tokens Shadow
+  * @presenter Shadow
+  */
+
+  /* TODO: These should be in rem or standard spacing units. */
+  --mds-shadow-small: 0 1px 2px var(--mds-color-gray-300);
+  --mds-shadow-large: 0 4px 8px var(--mds-color-gray-300);
+
+  /**
+  * @tokens Spacing
+  * @presenter Spacing
+  */
+  --space-unit: 0.5rem; /* Unit for smaller devices */
+  --mds-spacing-xx-small: calc(0.25 * var(--space-unit)); /* 4px */
+  --mds-spacing-x-small: calc(0.5 * var(--space-unit)); /* 8px */
+  --mds-spacing-small: calc(0.75 * var(--space-unit));
+  --mds-spacing-medium: calc(1 * var(--space-unit));
+  --mds-spacing-large: calc(1.25 * var(--space-unit));
+  --mds-spacing-x-large: calc(1.75 * var(--space-unit));
+
+  /**
+  * @tokens Border
+  * @presenter Border
+  */
+  --mds-border-thin-light: 1px solid var(--mds-color-gray-300);
+  --mds-border-thin: 1px solid var(--mds-color-gray-900);
+  --mds-border-medium: 2px solid var(--mds-color-gray-900);
+  --mds-border-thick: 5px solid var(--mds-color-primary-500);
+  --mds-border-error: 3px solid var(--mds-color-primary-500);
+  --mds-border-info: 1px dotted var(--mds-color-gray-900);
+
+  /**
+  * @tokens Transition
+  * @presenter Easing
+  */
+
+  /*
+    TODO:
+      These curves describe acceleration (transition-timing-functions), not speed, we should rename them.
+      They are are also not useful by themselves without a duration value.
+      The current names are misleading.
+    */
+  --mds-transition-slow: cubic-bezier(0.21, 0, 0.85, 1);
+  --mds-transition-medium: cubic-bezier(0.59, 0, 0.47, 1);
+  --mds-transition-fast: cubic-bezier(0.89, 0.01, 0.02, 1.03);
+
+  /* TODO: we need proper values and scales for these, as of now, they are arbitrary: */
+  --mds-transition-delay-short: 0.1s;
+  --mds-transition-duration-short: 0.3s;
+
+  /**
+  * Typography tokens
+  * @tokens Font families
+  * @presenter FontFamily
+  */
+  --mds-font-mono: sfmono-regular, consolas, "Liberation Mono", menlo, monospace;
+
+  /* San-serif */
+  --mds-font-sans:
+    mcgillsans-regular,
+    -apple-system,
+    blinkmacsystemfont,
+    "Segoe UI",
+    roboto,
+    helvetica,
+    arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  --mds-font-sans-medium:
+    mcgillsans-medium,
+    -apple-system,
+    blinkmacsystemfont,
+    "Segoe UI",
+    roboto,
+    helvetica,
+    arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  --mds-font-sans-bold:
+    mcgillsans-bold,
+    -apple-system,
+    blinkmacsystemfont,
+    "Segoe UI",
+    roboto,
+    helvetica,
+    arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  --mds-font-sans-italic:
+    mcgillsans-italic,
+    -apple-system,
+    blinkmacsystemfont,
+    "Segoe UI",
+    roboto,
+    helvetica,
+    arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol";
+
+  /* Serif */
+  --mds-font-serif: mcgillserif-regular, georgia, "Times New Roman", serif;
+  --mds-font-serif-medium: mcgillserif-medium, georgia, "Times New Roman", serif;
+  --mds-font-serif-bold: mcgillserif-bold, georgia, "Times New Roman", serif;
+  --mds-font-serif-italic: mcgillserif-italic, georgia, "Times New Roman", serif;
+
+  /**
+  * @tokens Font size
+  * @presenter FontSize
+  */
+
+  --max-vw: 80; /* 1280px wide */
+
+  /* Fixed font sizes without viewport scaling. */
+  --mds-font-size-large-fixed: 1.25rem;
+  --mds-font-size-x-large-fixed: 1.5rem;
+  --mds-font-size-xx-large-fixed: 2rem;
+  --mds-font-size-xxx-large-fixed: 2.25rem;
+
+  /* Default Responsive font sizes with viewport scaling. */
+  --mds-font-size-small: clamp(0.875rem, calc(0.88 / var(--max-vw) * 100vw), 0.88rem);
+  --mds-font-size-medium: clamp(1rem, calc(1 / var(--max-vw) * 100vw), 1rem);
+  --mds-font-size-large: clamp(var(--mds-font-size-large-fixed), calc(1.58 / var(--max-vw) * 100vw), 1.58rem);
+  --mds-font-size-x-large: clamp(var(--mds-font-size-x-large-fixed), calc(1.75 / var(--max-vw) * 100vw), 1.75rem);
+  --mds-font-size-xx-large: clamp(var(--mds-font-size-xx-large-fixed), calc(2.88 / var(--max-vw) * 100vw), 2.88rem);
+  --mds-font-size-xxx-large: clamp(var(--mds-font-size-xxx-large-fixed), calc(3.842 / var(--max-vw) * 100vw), 3.842rem);
+
+  /* Font weights  */
+  --mds-font-weight-light: 300;
+  --mds-font-weight-normal: 400;
+  --mds-font-weight-semibold: 500;
+  --mds-font-weight-bold: 700;
+
+  /* Icon size. */
+  --mds-icon-size-normal: 1.4em;
+
+  /**
+  * @tokens Line height
+  * @presenter LineHeight
+  */
+  --mds-line-height-dense: 1.2;
+  --mds-line-height-normal: 1.4;
+  --mds-line-height-loose: 1.8;
+
+  /**
+  * @tokens Z-index
+  * @presenter Shadow
+  */
+  --mds-z-index-drawer: 700;
+  --mds-z-index-dialog: 800;
+  --mds-z-index-dropdown: 900;
+  --mds-z-index-toast: 950;
+  --mds-z-index-tooltip: 1000;
+
+  /**
+  * @tokens Icons
+  * @presenter Shadow
+  */
+  --mds-icon-error: url(data%3Aimage%2Fsvg%2Bxml%3Butf8%2C%3Csvg+version%3D%271.1%27+xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27+xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27+width%3D%2724%27+height%3D%2724%27+viewBox%3D%270+0+512+512%27%3E%3Ctitle%3EAlert+Circle%3C%2Ftitle%3E%3Cpath+fill%3D%27none%27+d%3D%27M240+304h32l6-160h-44l6+160z%27%2F%3E%3Cpath+fill%3D%27rgb%28237%2C+27%2C+47%29%27+d%3D%27M256+48C141.31+48+48+141.31+48+256s93.31+208+208+208+208-93.31+208-208S370.69+48+256+48zm20+319.91h-40v-40h40zM272+304h-32l-6-160h44z%27%2F%3E%3C%2Fsvg%3E);
+  --mds-icon-search-black: url(data%3Aimage%2Fsvg%2Bxml%3Butf8%2C%3Csvg+fill%3D%22black%22+xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22+width%3D%2227%22+height%3D%2227%22+viewBox%3D%220+0+512+512%22%3E%3Cpath+d%3D%22M464+428L339.92+303.9a160.48+160.48+0+0030.72-94.58C370.64+120.37+298.27+48+209.32+48S48+120.37+48+209.32s72.37+161.32+161.32+161.32a160.48+160.48+0+0094.58-30.72L428+464zM209.32+319.69a110.38+110.38+0+11110.37-110.37+110.5+110.5+0+01-110.37+110.37z%22%2F%3E%3C%2Fsvg%3E);
+}
+
+/* larger screens */
+@media (min-width: 720px) {
+  :root {
+    /* Space options are based on the --space-unit value. */
+    --space-unit: 1rem;
+  }
+}
+
+/* MDS font-face definitions. */
+
+/* Sans-regular. */
+@font-face {
+  font-family: McGillSans-Regular;
+  src: url("fonts/McGillSans-Regular.eot");
+  src:
+    url("fonts/McGillSans-Regular.eot?#iefix")
+    format("embedded-opentype"),
+    url("fonts/McGillSans-Regular.woff") format("woff"),
+    url("fonts/McGillSans-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+/* Sans-medium. */
+@font-face {
+  font-family: McGillSans-Medium;
+  src: url("fonts/McGillSans-Medium.eot");
+  src:
+    url("fonts/McGillSans-Medium.eot?#iefix")
+    format("embedded-opentype"),
+    url("fonts/McGillSans-Medium.woff") format("woff"),
+    url("fonts/McGillSans-Medium.ttf") format("truetype");
+  font-display: swap;
+}
+
+/* Sans-bold. */
+@font-face {
+  font-family: McGillSans-Bold;
+  src: url("fonts/McGillSans-Bold.eot");
+  src:
+    url("fonts/McGillSans-Bold.eot?#iefix")
+    format("embedded-opentype"),
+    url("fonts/McGillSans-Bold.woff") format("woff"),
+    url("fonts/McGillSans-Bold.ttf") format("truetype");
+  font-display: swap;
+}
+
+/* Sans-italic. */
+@font-face {
+  font-family: McGillSans-Italic;
+  src: url("fonts/McGillSans-Italic.eot");
+  src:
+    url("fonts/McGillSans-Italic.eot?#iefix")
+    format("embedded-opentype"),
+    url("fonts/McGillSans-Italic.woff") format("woff"),
+    url("fonts/McGillSans-Italic.ttf") format("truetype");
+  font-display: swap;
+}
+
+/*
+ Serif
+ */
+
+/* Serif-regular. */
+@font-face {
+  font-family: McGillSerif-Regular;
+  src: url("fonts/McGillSerif-Regular.eot");
+  src:
+    url("fonts/McGillSerif-Regular.eot?#iefix")
+    format("embedded-opentype"),
+    url("fonts/McGillSerif-Regular.woff") format("woff"),
+    url("fonts/McGillSerif-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+/* Serif-medium. */
+@font-face {
+  font-family: McGillSerif-Medium;
+  src: url("fonts/McGillSerif-Medium.eot");
+  src:
+    url("fonts/McGillSerif-Medium.eot?#iefix")
+    format("embedded-opentype"),
+    url("fonts/McGillSerif-Medium.woff") format("woff"),
+    url("fonts/McGillSerif-Medium.ttf") format("truetype");
+  font-display: swap;
+}
+
+/* Serif-bold. */
+@font-face {
+  font-family: McGillSerif-Bold;
+  src: url("fonts/McGillSerif-Bold.eot");
+  src:
+    url("fonts/McGillSerif-Bold.eot?#iefix")
+    format("embedded-opentype"),
+    url("fonts/McGillSerif-Bold.woff") format("woff"),
+    url("fonts/McGillSerif-Bold.ttf") format("truetype");
+  font-display: swap;
+}
+
+/* Serif-italic. */
+@font-face {
+  font-family: McGillSerif-Italic;
+  src: url("fonts/McGillSerif-Italic.eot");
+  src:
+    url("fonts/McGillSerif-Italic.eot?#iefix")
+    format("embedded-opentype"),
+    url("fonts/McGillSerif-Italic.woff") format("woff"),
+    url("fonts/McGillSerif-Italic.ttf") format("truetype");
+  font-display: swap;
+}
