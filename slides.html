@@ -11,12 +11,25 @@ nav_order: 5
 
 <section data-transition="none">
   <h2>What is version control?</h2>
-  <ul>
-    <li>Any system that manages changes to files over time.</li>
-    <li>Benefits of a version control system include:
-      <ul><li>Collaboration</li><li>Versioning</li></ul>
-    </li>
-  </ul>
+  <p>Version control refers to any system that manages changes to files over time.</p>
+  <p>This makes refering to – and reverting back to – earlier stages of a project very easy.<br>It also makes collaborating with others easier since you can understand what changes were made and why.
+</section>
+
+<section data-transition="none">
+  <h2>Why is this tutorial in two parts?</h2>
+  <p>For most use cases, interacting with git locally, via the command line, is preferred, but there are two use cases (perhaps more) where it would reasonable to do everything using GitHub’s web interface.</p>
+  <p>(1) You have an immediate need to share your code online as a static “final product.”</p>
+  <p>(2) You want to create a GitHub Pages website that is relatively simple (e.g., by cloning someone else’s theme and making small infrequent edits to it).</p>
+  <p>
+</section>
+
+<section data-transition="none">
+  <h2>Some terminology</h2>
+  <p>Git vs. GitHub</p>
+  <p>Repository (repo)</p>
+  <p>Commit</p>
+  <p>Branch</p>
+  <p>Working tree vs. stage vs. repository</p>
 </section>
 
 <section data-transition="none">
@@ -55,6 +68,11 @@ nav_order: 5
 </section>
 
 <section data-transition="none">
+  <h2></h2>
+  <img src="{{ '/screenshots/git-status.png' | relative_url }}" alt="git status">
+</section>
+
+<section data-transition="none">
   <h2>Now we’re ready!</h2>
   <div class="terminal">
     <p>$ git init -b main</p>
@@ -86,5 +104,8 @@ nav_order: 5
   <h2>Now we’re ready!</h2>
   <div class="terminal">
     <p>$ git push -u origin main</p>
+    <p>Username:</br>Password:</p>
   </div>
+  <br>
+  <p>Be aware of <em>blind typing</em>, i.e., when you paste or type your token (or sensitive data more generally), you won’t see anything, not even asterisks. This is normal; the data is being input <em>invisibly!</em></p>
 </section>
