@@ -7,6 +7,5 @@ nav_order: 6
 
 # Resources
 
-* #1
-* #2
-* #3
+* [Version Control with Git](https://swcarpentry.github.io/git-novice/)
+* [git - the simple guide](http://rogerdudler.github.io/git-guide/)
