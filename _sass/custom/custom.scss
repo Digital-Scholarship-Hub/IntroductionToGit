@@ -20,6 +20,11 @@ a:not([class]) {
   text-underline-offset: auto
 }
 
+.main-content ul {
+  list-style: disc inside;
+  padding: revert;
+  margin-top: revert
+}
 
 
 
