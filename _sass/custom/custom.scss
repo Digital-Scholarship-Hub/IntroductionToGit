@@ -5,8 +5,6 @@
 @import "tables";
 @import "images";
 
-@import "reveal";
-
 ///////////////
 // overrides //
 ///////////////
@@ -26,42 +24,7 @@ a:not([class]) {
   margin-top: revert
 }
 
-
-
-.reveal .footer {
-  position: absolute;
-  bottom: 1em;
-  left: 1em;
-  font-size: 0.9em;
-  z-index: 100
-}
-
-.reveal .footer > a {
-  text-decoration: none
-}
-
-.terminal {
-  background-color: #151515;
-  box-sizing: border-box;
-  width: 500px;
-  height: 300px;
-  margin: 0 auto;
-  padding: 20px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-.terminal > p {
-  text-align: left;
-  font-size: 1.25em;
-  font-family: monospace;
-  white-space: normal;
-}
-
-.terminal > p:nth-child(odd) {
-  color: #CDEE69
-}
-
-.terminal > p:nth-child(even) {
-  color: #9CD9F0
+footer.site-footer > svg {
+  display: block;
+  margin-bottom: 7px
 }

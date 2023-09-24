@@ -2,7 +2,7 @@
 layout: default
 title: Resources
 permalink: /resources/
-nav_order: 6
+nav_order: 4
 ---
 
 # Resources

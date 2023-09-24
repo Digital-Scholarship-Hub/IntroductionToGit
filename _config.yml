@@ -2,6 +2,8 @@ title: "Introduction To Git"
 
 baseurl: /IntroductionToGit
 
+lang: en-CA
+
 remote_theme: just-the-docs/just-the-docs
 search_enabled: false
 
