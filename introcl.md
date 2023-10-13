@@ -85,7 +85,7 @@ Output{: .label .label-yellow}
 /Users/riley/Desktop
 ~~~
 
-## Working with Files and Directories
+## Creating Directories
 
 Now, we will create a new directory and move into it:
 
