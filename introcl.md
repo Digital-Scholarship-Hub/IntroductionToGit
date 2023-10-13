@@ -23,28 +23,24 @@ When working in the shell, you are always somewhere in the computer’s file sys
 
 Let’s type pwd and press enter to execute the command:
 
-Input
-{: .label .label-green}
+Input{: .label .label-green}
 ~~~
 pwd
 ~~~
 
-Output
-{: .label .label-yellow}
+Output{: .label .label-yellow}
 ~~~ 
 /Users/riley
 ~~~
 
 The output will be a path to your home directory. Let’s check if we recognise it by looking at the contents of the directory. To do that, we use the ls command. This stands for “list” and the result is a print out of all the contents in the directory:
 
-Input
-{: .label .label-green}
+Input{: .label .label-green}
 ~~~
 ls
 ~~~
 
-Output
-{: .label .label-yellow}
+Output{: .label .label-yellow}
 ~~~ 
 Applications Documents    Library      Music        Public
 Desktop      Downloads    Movies       Pictures
@@ -54,14 +50,12 @@ If we want more information, we type ls -l and press enter, the computer returns
 
 The -l  is an example of a flag (also known as option, parameter, or, most frequently, argument) to go with our basic commands. Arguments modify the workings of the command by telling the computer what sort of output or manipulation we want.
 
-Input
-{: .label .label-green}
+Input{: .label .label-green}
 ~~~
 ls -l
 ~~~
 
-Output
-{: .label .label-yellow}
+Output{: .label .label-yellow}
 ~~~ 
 total 0
 drwx------+  6 riley  staff   204 Jul 16 11:50 Desktop
@@ -76,20 +70,17 @@ drwxr-xr-x+  5 riley  staff   170 Jul 16 11:30 Public
 
 We’ve now spent a great deal of time in our home directory. Let’s go somewhere else. We can do that through the cd or Change Directory command:
 
-Input
-{: .label .label-green}
+Input{: .label .label-green}
 ~~~
 cd Desktop
 ~~~
 
-Input
-{: .label .label-green}
+Input{: .label .label-green}
 ~~~
 pwd
 ~~~
 
-Output
-{: .label .label-yellow}
+Output{: .label .label-yellow}
 ~~~ 
 /Users/riley/Desktop
 ~~~
@@ -99,8 +90,7 @@ Output
 Now, we will create a new directory and move into it:
 
 
-Input
-{: .label .label-green}
+Input{: .label .label-green}
 ~~~
 mkdir firstdir
 cd firstdir
