@@ -22,6 +22,7 @@ Let’s start by opening the shell. This likely results in seeing a black or whi
 When working in the shell, you are always somewhere in the computer’s file system, in some folder (directory). We will therefore start by finding out where we are by using the pwd command, which you can use whenever you are unsure about where you are. It stands for “print working directory” and the result of the command is printed to your standard output, which is the screen.
 
 Let’s type pwd and press enter to execute the command:
+
 Input
 {: .label .label-green}
 ~~~
@@ -35,6 +36,7 @@ Output
 ~~~
 
 The output will be a path to your home directory. Let’s check if we recognise it by looking at the contents of the directory. To do that, we use the ls command. This stands for “list” and the result is a print out of all the contents in the directory:
+
 Input
 {: .label .label-green}
 ~~~
@@ -73,6 +75,7 @@ drwxr-xr-x+  5 riley  staff   170 Jul 16 11:30 Public
 ~~~
 
 We’ve now spent a great deal of time in our home directory. Let’s go somewhere else. We can do that through the cd or Change Directory command:
+
 Input
 {: .label .label-green}
 ~~~
