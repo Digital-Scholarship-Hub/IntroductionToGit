@@ -226,6 +226,8 @@ Having made a commit, we now have a permanent record of what was changed, and gi
 
 This time, git status will show us that there is nothing to commit.
 
+![git staging area]({{ '/screenshots/stage.png' | relative_url }})
+
 ## Work with Branches
 
 ### What are branches?

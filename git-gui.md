@@ -98,5 +98,3 @@ You can click on the Add file button on the right corner of the file list. You c
 Here are some of the Git commands and GitHub features you will encounter:
 * **Fork**. A GitHub feature that makes a copy of another GitHub user’s repository in your own GitHub account. You have full control over the fork because it’s in your account.
 * **Clone**. A Git command that makes a local copy of a GitHub repository on your own computer. It allows you to write and edit using your preferred software, then commit and push your changes back to the repository on GitHub. (You can only push the changes back to GitHub if you have permission to edit the repository on GitHub.)
-
-![git staging area]({{ '/screenshots/stage.png' | relative_url }})
