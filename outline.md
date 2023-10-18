@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Git & GitHub
-permalink: /GitHub/
+title: Outline
+permalink: /outline/
 has_children: true
 has_toc: false
 nav_order: 3
